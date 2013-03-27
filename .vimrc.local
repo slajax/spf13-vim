@@ -27,7 +27,7 @@ nnoremap <silent> <C-v> p+<CR>
 nnoremap <silent> <s-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <s-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
-call pathogen#infect()
+"call pathogen#infect()
 
 :highlight SignColumn guibg=black
 :highlight SignColumn ctermbg=black
