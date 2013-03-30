@@ -24,7 +24,13 @@ endif
 " Programming
     Bundle 'taxilian/a.vim.git'
     if !exists("g:tax_disable_showmarks")
-        Bundle 'ShowMarks'
+       Bundle 'scrooloose/syntastic'
+       Bundle 'tpope/vim-fugitive'
+       Bundle 'scrooloose/nerdcommenter'
+       Bundle 'ShowMarks'
+       if executable('ctags')
+           Bundle 'majutsushi/tagbar'
+       endif
     endif
 
 " General
