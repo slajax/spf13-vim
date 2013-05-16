@@ -54,4 +54,7 @@ endif
         Bundle 'corntrace/bufexplorer'
         Bundle 'mbbill/undotree'
         Bundle 'airblade/vim-gitgutter'
+        Bundle 'terryma/vim-multiple-cursors'
+        Bundle 'wavded/vim-stylus'
+        Bundle 'digitaltoad/vim-jade'
     endif
