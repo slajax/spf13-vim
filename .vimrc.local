@@ -2,7 +2,7 @@ set ts=2
 set sw=2
 set st=2
 set sts=2
-set expandtab
+set expandtab|retab
 colorscheme solarized
 set background=dark
 autocmd FileType make setlocal noexpandtab
@@ -35,13 +35,22 @@ let NERDTreeShowHidden=1
 
 let g:DisableAutoPHPFolding = 1
 
-let g:syntastic_check_on_open=0
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
+let g:loaded_syntastic_plugin=1
+"let g:syntastic_check_on_open=0
+"let g:syntastic_error_symbol='✗'
+"let g:syntastic_warning_symbol='⚠'
 
 let g:javascript_conceal=1
 
 set clipboard+=unnamed
 set guioptions+=a
-set nofoldenable
 
+set fdm=syntax fen
+set foldlevel=99
+augroup closeCommentFolds
+   au!
+   au FileType javascript %foldo | g/^\s*\/\*/foldc
+augroup end
+
+
+execute pathogen#infect()
